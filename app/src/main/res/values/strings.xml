@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EES</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="getStarted">Get Started</string>
+    <string name="skip">Skip</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Home fragment</string>
+    <string name="map_fragment">Map fragment</string>
+    <string name="about_fragment">About fragment</string>
+</resources>
