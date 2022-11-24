@@ -7,4 +7,21 @@
     <string name="home_fragment">Home fragment</string>
     <string name="map_fragment">Map fragment</string>
     <string name="about_fragment">About fragment</string>
+    <string name="school_label">Libellé</string>
+    <string name="required">Champ obligatoire</string>
+    <string name="sigle_label">sigle</string>
+    <string name="libelle">Libellé</string>
+    <string name="school_type">Type</string>
+    <string name="add">Ajouter</string>
+    <string name="school_sector">Secteur</string>
+    <string name="school_vague">Vague</string>
+    <string name="geolocalisation_X">X</string>
+    <string name="geolocalisation_Y">Y</string>
+    <string name="date_creation">Date de création</string>
+    <string name="school_department">Département</string>
+    <string name="school_region">Région</string>
+    <string name="school_adress">"Adresse "</string>
+    <string name="codePostal">Code postal</string>
+    <string name="school_website">Site Web</string>
+    <string name="school_fb">Compte Facebook</string>
 </resources>

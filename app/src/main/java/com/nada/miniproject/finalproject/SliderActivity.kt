@@ -9,7 +9,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
 
@@ -33,19 +32,19 @@ class SliderActivity : AppCompatActivity() {
         sliderItemsAdapter = SliderItemsAdapter(
             listOf(
                 SliderItem(
-                    sliderImage = R.drawable.logo,
-                    title = "Title 1",
-                    description = "Description 1"
+                    sliderImage = R.drawable.infos,
+                    title = "EES",
+                    description = "Caractéristiques des principaux établissements d'enseignement supérieur"
                 ),
                 SliderItem(
-                    sliderImage = R.drawable.logo,
-                    title = "Title 2",
-                    description = "Description 2"
+                    sliderImage = R.drawable.map,
+                    title = "Géolocalisation",
+                    description = "Géolocaliser les établissements sur la carte"
                 ),
                 SliderItem(
-                    sliderImage = R.drawable.logo,
-                    title = "Title 3",
-                    description = "Description 3"
+                    sliderImage = R.drawable.school,
+                    title = "Nouveau établissement?",
+                    description = "Enrichissez la base de données avec les nouveaux établissements"
                 )
             )
         )
