@@ -24,4 +24,15 @@
     <string name="codePostal">Code postal</string>
     <string name="school_website">Site Web</string>
     <string name="school_fb">Compte Facebook</string>
+
+
+    <string-array name="vague">
+        <item>crane</item>
+        <item>Cuckoo</item>
+        <item>Pigeon</item>
+        <item>Eagle</item>
+        <item>Owl</item>
+        <item>Vulture</item>
+        <item>WoodPecker</item>
+    </string-array>
 </resources>

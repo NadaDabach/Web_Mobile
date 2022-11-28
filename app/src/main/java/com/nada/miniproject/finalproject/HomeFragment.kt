@@ -1,5 +1,6 @@
 package com.nada.miniproject.finalproject
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ private const val SCHOOLS = "schools"
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var schoolAdapter: SchoolAdapter
@@ -45,20 +47,13 @@ class HomeFragment : Fragment() {
         val linearLayoutManager = LinearLayoutManager(context)
         rcvSchools.layoutManager = linearLayoutManager
 
-        return rootView    }
+        return rootView
+    }
+
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(schools: ArrayList<School>) =
             HomeFragment().apply {
                 arguments = Bundle().apply {
                     putSerializable(SCHOOLS, schools)
@@ -66,5 +61,3 @@ class HomeFragment : Fragment() {
             }
     }
 }
-
-//https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io/schools

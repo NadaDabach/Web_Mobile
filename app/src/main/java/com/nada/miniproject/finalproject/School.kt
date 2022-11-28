@@ -6,7 +6,7 @@ data class School(
     val type: String,
     val secteur: String,
     val vague: String,
-    val geolocalisation: (Double, Double) -> Double,
+    val geolocalisation: ArrayList<Double>,
     val date: String,
     val departement: String,
     val region: String,
@@ -17,5 +17,6 @@ data class School(
     val compte_fb: String,
     val compte_twitter: String,
     val compte_insta: String,
-    val favorite: Boolean
-)
+    val favorite: Boolean,
+    //val imageResource: String
+): java.io.Serializable
