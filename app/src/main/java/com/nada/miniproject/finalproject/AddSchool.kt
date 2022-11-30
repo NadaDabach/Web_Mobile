@@ -66,7 +66,7 @@ class AddSchool : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val region = edtRegion.text.toString()
             val adresse = edtAdresse.text.toString()
             val code = edtCodePostal
-            val codePostal: Int = code.getText().toString().toInt()
+            val codePostal: Int = code.text.toString().toInt()
             val num = edtNumTel.text.toString()
             val site = edtSite.text.toString()
             val fb = edtFb.text.toString()
@@ -109,5 +109,4 @@ class AddSchool : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val text: String = parent?.getItemAtPosition(position).toString()
     }
-
 }
