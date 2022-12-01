@@ -53,6 +53,7 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
         holder.libelle.text = school.libelle
         holder.secteur.text = school.secteur
         holder.favorite.setOnClickListener{
+            school.favorite = !school.favorite
             addToFavorite(holder, school.favorite)
         }
 

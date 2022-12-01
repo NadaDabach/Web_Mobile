@@ -1,5 +1,6 @@
 package com.nada.miniproject.finalproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -77,10 +78,11 @@ class AddSchool : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             arrayList.add(x)//Adding object in arraylist
             arrayList.add(y)
 
-            val school = School(libelle, sigle, type, secteur, vague, arrayList, date,
+            val school = School(libelle, sigle, type, secteur, vague, doubleArrayOf(x,y), date,
             departement, region, adresse, codePostal, num, site, fb, inst, twitter, false)
 
             listener?.onSchoolCreated(school)
+            startActivity(Intent(applicationContext, MainActivity::class.java))
         }
 
        /* val spinner=findViewById<Spinner>(R.id.vagueEditText) as Spinner

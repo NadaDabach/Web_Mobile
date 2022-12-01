@@ -3,7 +3,7 @@ package com.nada.miniproject.finalproject
 import java.lang.RuntimeException
 
 class Schools {
-    private val schools: HashMap<String, School> = HashMap();
+    private val schools: HashMap<String, School> = HashMap()
 
     fun addSchool(school: School) {
         schools[school.libelle] = school;

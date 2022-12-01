@@ -1,14 +1,15 @@
 package com.nada.miniproject.finalproject
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface SchoolService {
     @GET("/schools")
     fun getAllBooks(): Call<List<School>>
 
     @POST("/schools")
-    fun createBook(@Body() book:School): Call<School>
+    fun createBook(@Body() school: School): Call<School>
+
+    @PUT("schools/{libelle}")
+    fun addToFavorite(@Path("libelle") libelle: String, @Body favorite: Favorite): Call<School>
 }

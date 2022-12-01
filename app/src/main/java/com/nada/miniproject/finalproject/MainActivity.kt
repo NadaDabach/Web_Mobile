@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_bar_home -> replaceFragment(HomeFragment())
-                R.id.navigation_bar_map -> replaceFragment(MapFragment())
+                R.id.navigation_bar_map -> replaceFragment(MapsFragment())
                 R.id.navigation_bar_about -> replaceFragment(AboutFragment())
                 else ->{
                 }
@@ -91,4 +91,18 @@ class MainActivity : AppCompatActivity() {
             .commit()
         btnCreateSchool.show()
     }
+
+    /*private fun addSchool(holder: SchoolViewHolder, school: School){
+        schoolService.createBook(school).enqueue(object: Callback<School>{
+            override fun onResponse(call: Call<School>, response: Response<School>) {
+                val createSchool: List<School>? = response.body()
+                createSchool?.forEach { schoolList.addSchool(it) }
+            }
+
+            override fun onFailure(call: Call<School>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }*/
 }
