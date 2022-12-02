@@ -22,6 +22,7 @@ private const val SCHOOLS = "schools"
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var schoolAdapter: SchoolAdapter
+    private lateinit var schoolFavorite: SchoolFavorite
     private lateinit var rcvSchools: RecyclerView
     private var schools: ArrayList<School> = arrayListOf()
 

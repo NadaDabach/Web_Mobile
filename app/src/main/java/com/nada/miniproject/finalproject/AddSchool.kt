@@ -52,6 +52,7 @@ class AddSchool : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         edtTwitter = findViewById(R.id.twitterEditText)
         btnAdd = findViewById(R.id.addButton)
 
+        var intent=intent
         btnAdd.setOnClickListener{
             val libelle = edtLibelle.text.toString()
             val sigle = edtSigle.text.toString()
@@ -74,15 +75,15 @@ class AddSchool : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val inst = edtInst.text.toString()
             val twitter = edtTwitter.text.toString()
 
-            val arrayList = ArrayList<Double>(5)
+            /*val arrayList = ArrayList<Double>(5)
             arrayList.add(x)//Adding object in arraylist
-            arrayList.add(y)
+            arrayList.add(y)*/
 
             val school = School(libelle, sigle, type, secteur, vague, doubleArrayOf(x,y), date,
             departement, region, adresse, codePostal, num, site, fb, inst, twitter, false)
 
             listener?.onSchoolCreated(school)
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+
         }
 
        /* val spinner=findViewById<Spinner>(R.id.vagueEditText) as Spinner

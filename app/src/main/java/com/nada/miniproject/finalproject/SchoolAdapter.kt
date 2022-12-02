@@ -10,11 +10,10 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-//F844US
-
 class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<SchoolViewHolder>()  {
 
     private lateinit var context: Context
+    private var schoolFavorite: SchoolFavorite? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SchoolViewHolder {
         val row = LayoutInflater.from(parent.context).inflate(
@@ -55,6 +54,7 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
         holder.favorite.setOnClickListener{
             school.favorite = !school.favorite
             addToFavorite(holder, school.favorite)
+            schoolFavorite?.onFavoriteSchool(school)
         }
 
         holder.itemView.setOnClickListener {
@@ -83,8 +83,8 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
         else{
             btnFavorite = R.drawable.ic_favorite
         }
-
         holder.favorite.setImageDrawable(ContextCompat.getDrawable(context, btnFavorite))
+
     }
 
 }

@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 const val SERVER_BASE_URL = "https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io"
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SchoolCreator, SchoolFavorite {
     private lateinit var binding : ActivityMainBinding
 
     val retrofit = Retrofit.Builder()
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(HomeFragment())
 
-        schoolService.getAllBooks()
+        schoolService.getAllSchool()
             .enqueue(object : Callback<List<School>> {
                 override fun onResponse(
                     call: Call<List<School>>,
@@ -92,17 +92,32 @@ class MainActivity : AppCompatActivity() {
         btnCreateSchool.show()
     }
 
-    /*private fun addSchool(holder: SchoolViewHolder, school: School){
-        schoolService.createBook(school).enqueue(object: Callback<School>{
-            override fun onResponse(call: Call<School>, response: Response<School>) {
-                val createSchool: List<School>? = response.body()
-                createSchool?.forEach { schoolList.addSchool(it) }
-            }
+    override fun onSchoolCreated(school: School) {
+        schoolService.createSchool(school)
+            .enqueue(object : Callback<School>{
+                override fun onResponse(call: Call<School>, response: Response<School>) {
+                    response.body()?.let {schoolList.addSchool(it)}
+                    displaySchoolListFragment()
+                }
+                override fun onFailure(call: Call<School>, t: Throwable) {
+                    Toast.makeText(applicationContext, "fail created mdr", Toast.LENGTH_SHORT).show()
+                }
+            })
 
-            override fun onFailure(call: Call<School>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
+    }
 
-        })
-    }*/
+    override fun onFavoriteSchool(school: School) {
+        schoolService.addToFavorite(school.libelle)
+            .enqueue(object : Callback<School>{
+                override fun onResponse(call: Call<School>, response: Response<School>) {
+                    response.body()?.let {schoolList.addTofavorite(it)}
+                    displaySchoolListFragment()
+                }
+                override fun onFailure(call: Call<School>, t: Throwable) {
+                    Toast.makeText(applicationContext, "fail created mdr", Toast.LENGTH_SHORT).show()
+                }
+            })
+
+    }
+
 }

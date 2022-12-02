@@ -21,6 +21,10 @@ class Schools {
         return schools.size;
     }
 
+    fun addTofavorite(school: School){
+        schools[school.libelle]?.favorite = !schools[school.libelle]?.favorite!!
+    }
+
     fun clean() {
         schools.clear();
     }

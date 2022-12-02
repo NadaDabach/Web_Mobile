@@ -5,11 +5,11 @@ import retrofit2.http.*
 
 interface SchoolService {
     @GET("/schools")
-    fun getAllBooks(): Call<List<School>>
+    fun getAllSchool(): Call<List<School>>
 
     @POST("/schools")
-    fun createBook(@Body() school: School): Call<School>
+    fun createSchool(@Body() school: School): Call<School>
 
     @PUT("schools/{libelle}")
-    fun addToFavorite(@Path("libelle") libelle: String, @Body favorite: Favorite): Call<School>
+    fun addToFavorite(@Path("libelle") libelle: String): Call<School>
 }
