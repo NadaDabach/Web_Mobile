@@ -12,4 +12,7 @@ interface SchoolService {
 
     @PUT("schools/{libelle}")
     fun addToFavorite(@Path("libelle") libelle: String): Call<School>
+
+    @DELETE("schools/{libelle}")
+    fun deleteSchool(@Path("libelle") libelle: String)
 }

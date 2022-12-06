@@ -10,6 +10,8 @@ class SchoolInfosDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school_infos_details)
 
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         var txvlibelle = findViewById<TextView>(R.id.textView)
         var txvSecteur = findViewById<TextView>(R.id.textView2)
         var txvAdresse = findViewById<TextView>(R.id.textView3)

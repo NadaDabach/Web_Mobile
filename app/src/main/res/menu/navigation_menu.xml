@@ -5,18 +5,18 @@
     <item
         android:id="@+id/navigation_bar_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"
+        android:title="Accueil"
         />
 
     <item
         android:id="@+id/navigation_bar_map"
         android:icon="@drawable/ic_map"
-        android:title="Map"
+        android:title="Carte"
         />
 
     <item
         android:id="@+id/navigation_bar_about"
         android:icon="@drawable/ic_about"
-        android:title="About"
+        android:title="Infos"
         />
 </menu>

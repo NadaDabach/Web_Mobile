@@ -84,7 +84,6 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
             btnFavorite = R.drawable.ic_favorite
         }
         holder.favorite.setImageDrawable(ContextCompat.getDrawable(context, btnFavorite))
-
     }
 
 }

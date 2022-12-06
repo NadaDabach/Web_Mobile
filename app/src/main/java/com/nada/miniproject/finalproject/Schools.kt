@@ -25,6 +25,10 @@ class Schools {
         schools[school.libelle]?.favorite = !schools[school.libelle]?.favorite!!
     }
 
+    fun deleteSchool(libelle: String){
+        schools[libelle]?.libelle
+    }
+
     fun clean() {
         schools.clear();
     }

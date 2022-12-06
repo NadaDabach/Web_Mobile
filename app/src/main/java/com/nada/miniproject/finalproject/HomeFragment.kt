@@ -26,12 +26,14 @@ class HomeFragment : Fragment() {
     private lateinit var rcvSchools: RecyclerView
     private var schools: ArrayList<School> = arrayListOf()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             schools = it.getSerializable(SCHOOLS) as ArrayList<School>
         }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

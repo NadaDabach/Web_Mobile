@@ -26,19 +26,15 @@
         -->
         <activity
             android:name=".SchoolInfosDetails"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-        <activity
-            android:name=".AddSchool"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <activity
             android:name=".SliderActivity"
             android:exported="false">
@@ -70,8 +66,8 @@
                 android:value="" />
         </activity>
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAhjYnwPS9DICb1uCwozx3OVfqYEAsb5xo" />
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBfSsSreMrTVQ6xezeV0eVSwR2c2ObtDC8" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
