@@ -6,34 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".SchoolInfosDetails">
 
+    <TextView
+        android:id="@+id/textViewSigle"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="116dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewLibelle"
         android:layout_width="307dp"
         android:layout_height="46dp"
         android:layout_marginTop="68dp"
-        android:text="TextView 1"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textViewSigle" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewSecteur"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="152dp"
-        android:text="TextView 2"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textViewLibelle" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewVague"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="244dp"
-        android:text="TextView 3"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textViewSecteur" />
+
+    <TextView
+        android:id="@+id/textViewRegion"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewVague" />
+
+    <TextView
+        android:id="@+id/textViewAdresse"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewRegion" />
+
+    <TextView
+        android:id="@+id/textViewFb"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse" />
+
+    <TextView
+        android:id="@+id/textViewTwitter"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewFb" />
+
+    <TextView
+        android:id="@+id/textViewInst"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTwitter" />
+
+    <!-- <ImageButton
+        android:id="@+id/fb_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="36dp"
+        android:background="@color/white"
+        android:src="@drawable/twitter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdresse" /> -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

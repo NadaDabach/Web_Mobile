@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/logo"
+        android:src="@mipmap/ic_logo"
         app:shapeAppearanceOverlay="@style/RoundCorner"/>
 
     <TextView
@@ -33,14 +33,25 @@
         app:layout_constraintTop_toTopOf="parent"  />
 
     <TextView
+        android:id="@+id/school_txv_vague_etablissement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="@+id/school_txv_label"
+        app:layout_constraintTop_toBottomOf="@+id/school_txv_label" />
+
+    <TextView
         android:id="@+id/school_txv_secteur_etablissement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textStyle="italic"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintStart_toStartOf="@+id/school_txv_label"
-        app:layout_constraintTop_toBottomOf="@+id/school_txv_label" />
+        app:layout_constraintStart_toStartOf="@+id/school_txv_vague_etablissement"
+        app:layout_constraintTop_toBottomOf="@+id/school_txv_vague_etablissement" />
 
     <View
         android:layout_width="match_parent"

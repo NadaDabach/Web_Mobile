@@ -13,65 +13,76 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import retrofit2.Call
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MapsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-private const val MUSEES = "schools"
+private const val SCHOOLS = "schools"
 
 class MapsFragment : Fragment() {
-    private var museums: ArrayList<School> = arrayListOf()
+    private var schools: ArrayList<School> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            museums = it.getSerializable(MUSEES) as ArrayList<School>
+            schools = it.getSerializable(SCHOOLS) as ArrayList<School>
         }
+    }
+
+    private val callback = OnMapReadyCallback { googleMap ->
+
+        schools.forEach{
+                it ->
+            val coord1 = it.geolocalisation?.get(0)
+            val coord2 = it.geolocalisation?.get(1)
+                if (coord2 != null && coord1 != null) {
+                    var location = LatLng(coord1, coord2)
+                    googleMap.addMarker(MarkerOptions().position(location).title(it.libelle))
+                }
+
+        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_maps, container, false)
-        val mapFragment =
+        /*val mapFragment =
             childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mapFragment?.getMapAsync { mMap ->
             mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
 
-            mMap.clear() //clear old markers
+            mMap.clear()
 
             val googlePlex = CameraPosition.builder()
-                .target(LatLng( 36.806389, 10.181667))
+                .target(LatLng( 46.63728, 2.3382623))
                 .zoom(10f)
                 .bearing(0f)
                 .tilt(45f)
                 .build()
             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null)
 
-            museums.forEach {
-                println(museums)
+            schools.forEach {
+                println(schools)
                 val location = LatLng(it.geolocalisation[0], it.geolocalisation[1])
                 mMap.addMarker(MarkerOptions().position(location).title(it.libelle))
             }
 
-        }
+        }*/
         return rootView
     }
 
-    /**override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    }*/
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
+    }
+
     companion object {
         @JvmStatic
-        fun newInstance(musees: ArrayList<School>) =
+        fun newInstance(schools: ArrayList<School>) =
             MapsFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(MUSEES, musees)
+                    putSerializable(SCHOOLS, schools)
                 }
             }
     }

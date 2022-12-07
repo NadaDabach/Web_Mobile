@@ -6,7 +6,7 @@ data class School(
     val type: String,
     val secteur: String,
     val vague: String,
-    val geolocalisation: DoubleArray,
+    val geolocalisation: DoubleArray?,
     val date: String,
     val departement: String,
     val region: String,

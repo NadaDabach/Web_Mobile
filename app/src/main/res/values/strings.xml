@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EES</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
-    <string name="getStarted">Get Started</string>
+    <string name="getStarted">Lancer l\'application</string>
     <string name="skip">Skip</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_fragment">Home fragment</string>
@@ -27,6 +27,10 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="refresh">Refresh</string>
+    <string name="delete">delete</string>
+    <string name="fragment_about">EES (Etablissemnts d\'Enseignement Supérieur) vous permet de trouver les principaux établissement d\'enseignement supérieur et les géocaliser. Pour mettre en place ce projet nous avons utilisé :</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="vague">
         <item>crane</item>
@@ -37,4 +41,7 @@
         <item>Vulture</item>
         <item>WoodPecker</item>
     </string-array>
+
+    <string name="api_link"><a href="https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io">Lien API</a></string>
+    <!-- link for practice textview-->
 </resources>
