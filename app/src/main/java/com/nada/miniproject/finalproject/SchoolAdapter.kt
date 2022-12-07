@@ -27,27 +27,6 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
     }
 
     override fun onBindViewHolder(holder: SchoolViewHolder, position: Int) {
-        /*val (
-            libelle,
-            sigle,
-            type,
-            secteur,
-            vague,
-            geolocalisation,
-            date,
-            departement,
-            region,
-            adresse,
-            code_postal,
-            numero_telephone,
-            site_web,
-            compte_fb,
-            compte_twitter,
-            compte_insta,
-            favorite,
-            imageResource
-        ) = schools[position]*/
-
         val school = schools[position];
 
         holder.libelle.text = school.libelle

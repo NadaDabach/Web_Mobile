@@ -23,9 +23,10 @@
 
     <TextView
         android:id="@+id/api_url"
-        android:layout_width="309dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="208dp"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/api_link"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="italic"
@@ -33,5 +34,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fragment_about" />
+
+    <TextView
+        android:id="@+id/dataset_url"
+        android:layout_width="309dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/dataset_link"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/api_url" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

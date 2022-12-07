@@ -1,6 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EES</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_splash_screen">EES</string>
     <string name="getStarted">Lancer l\'application</string>
     <string name="skip">Skip</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -42,7 +42,8 @@
         <item>WoodPecker</item>
     </string-array>
 
-    <string name="api_link"><a href="https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io">Lien API</a></string>
+    <string name="api_link" tools:ignore="TypographyDashes">Lien API : https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io/schools</string>
+    <string name="dataset_link" tools:ignore="TypographyDashes">Lien base de données : https://data.opendatasoft.com/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur%40mesr/api/?disjunctive.type_d_etablissement&amp;sort=uo_lib&amp;disjunctive.typologie_d_universites_et_assimiles</string>
     <string name="backButton">Retour à la page principale</string>
     <string name="numTel">Numéro de téléphone</string>
     <string name="create_school">Create School</string>
