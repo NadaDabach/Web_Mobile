@@ -1,7 +1,9 @@
 package com.nada.miniproject.finalproject
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -19,6 +21,9 @@ import androidx.navigation.fragment.findNavController
 
 class CreateSchoolFragment : Fragment() {
     private var listener: SchoolCreator? = null
+
+    lateinit var btnBack: Button
+
     lateinit var edtLibelle: EditText
     lateinit var edtSigle: EditText
     lateinit var edtType: EditText
@@ -48,7 +53,17 @@ class CreateSchoolFragment : Fragment() {
 
         (activity as AppCompatActivity).supportActionBar?.title = "Ajouter un nouveau établissement"
 
-        (activity as AppCompatActivity?)?.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        //(activity as AppCompatActivity?)?.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        btnBack = rootView.findViewById(R.id.backButton)
+
+        btnBack.setOnClickListener {
+            activity?.let {
+                val intent = Intent(it,MainActivity::class.java)
+                it.startActivity(intent)
+            }
+        }
+
 
         edtLibelle = rootView.findViewById(R.id.libelleEditText)
         edtSigle = rootView.findViewById(R.id.sigleEditText)
@@ -103,24 +118,6 @@ class CreateSchoolFragment : Fragment() {
             listener?.onSchoolCreated(school)
         }
 
-        /* val spinner=findViewById<Spinner>(R.id.vagueEditText) as Spinner
-
-        val vague= arrayOf("A","B","C","D","E")
-        val adapter=
-            ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,vague)
-
-        spinner.adapter=adapter
-
-        spinner.onItemSelectedListener=object : AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
-                Toast.makeText(applicationContext,"You have Selected "+vague[p2],Toast.LENGTH_LONG).show()
-            }
-        }*/
-
         return rootView
     }
 
@@ -144,11 +141,6 @@ class CreateSchoolFragment : Fragment() {
         fun newInstance() = CreateSchoolFragment()
     }
 
-    /*fun showBackButton() {
-        if (activity is AppCompatActivity) {
-            (activity as AppCompatActivity?)?.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        }
-    }*/
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle presses on the action bar menu items

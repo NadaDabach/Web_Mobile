@@ -39,7 +39,4 @@ class SliderItemsAdapter(private val sliderItems: List<SliderItem>):
             textDescription.text = sliderItem.description
         }
     }
-
-
-
 }

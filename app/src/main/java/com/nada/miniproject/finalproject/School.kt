@@ -18,5 +18,4 @@ data class School(
     val compte_twitter: String,
     val compte_insta: String,
     var favorite: Boolean,
-    //val imageResource: String
 ): java.io.Serializable

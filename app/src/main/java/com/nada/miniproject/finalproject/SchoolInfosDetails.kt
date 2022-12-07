@@ -21,29 +21,26 @@ class SchoolInfosDetails : AppCompatActivity() {
         var txvVague = findViewById<TextView>(R.id.textViewVague)
         var txvRegion = findViewById<TextView>(R.id.textViewRegion)
         var txvAdresse = findViewById<TextView>(R.id.textViewAdresse)
-        var txvFb = findViewById<TextView>(R.id.textViewFb)
-        var txvTwitter = findViewById<TextView>(R.id.textViewTwitter)
-        var txvInst = findViewById<TextView>(R.id.textViewInst)
+        var txvNum = findViewById<TextView>(R.id.textViewNum)
 
         //var btnFb = findViewById<ImageButton>(R.id.fb_button)
 
         var intent=intent
-        val dSigle=intent.getStringExtra("sigle")
-        val dLibelle=intent.getStringExtra("libelle")
-        val dSecteure=intent.getStringExtra("secteur")
-        val dVague=intent.getStringExtra("vague")
-        val dRegion=intent.getStringExtra("region")
-        val dAFb=intent.getStringExtra("fb")
-        val dATwitter=intent.getStringExtra("twt")
-        val dAInst=intent.getStringExtra("inst")
-        val dAdresse=intent.getStringExtra("adresse")
+        val iSigle=intent.getStringExtra("sigle")
+        val iLibelle=intent.getStringExtra("libelle")
+        val iSecteur=intent.getStringExtra("secteur")
+        val iVague=intent.getStringExtra("vague")
+        val iRegion=intent.getStringExtra("region")
+        val iAdresse=intent.getStringExtra("adresse")
+        val iNum=intent.getStringExtra("num")
 
-        txvSigle.text = dSigle
-        txvlibelle.text = dLibelle
-        txvSecteur.text = dSecteure
-        txvVague.text = dVague
-        txvRegion.text = dRegion
-        txvAdresse.text = dAdresse
-        txvFb.movementMethod = LinkMovementMethod.getInstance()
+
+        txvSigle.text = iSigle
+        txvlibelle.text = iLibelle
+        txvSecteur.text = iSecteur
+        txvVague.text = iVague
+        txvRegion.text = iRegion
+        txvAdresse.text = iAdresse
+        txvNum.text = iNum
     }
 }

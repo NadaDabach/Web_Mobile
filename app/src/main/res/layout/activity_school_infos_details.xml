@@ -6,125 +6,183 @@
     android:layout_height="match_parent"
     tools:context=".SchoolInfosDetails">
 
-    <TextView
-        android:id="@+id/textViewSigle"
-        android:layout_width="307dp"
+    <ImageView
+        android:id="@+id/imageViewVague"
+        android:layout_width="46dp"
         android:layout_height="46dp"
-        android:layout_marginTop="116dp"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="328dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewVague"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
-    <TextView
-        android:id="@+id/textViewLibelle"
-        android:layout_width="307dp"
+    <ImageView
+        android:id="@+id/imageViewSecteur"
+        android:layout_width="46dp"
         android:layout_height="46dp"
-        android:layout_marginTop="68dp"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="248dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSecteur"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewSigle" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
-    <TextView
-        android:id="@+id/textViewSecteur"
-        android:layout_width="307dp"
+    <ImageView
+        android:id="@+id/imageViewAdresse"
+        android:layout_width="46dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="480dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAdresse"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewLibelle" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSigle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/imageViewNum"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="552dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNum"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_contact_phone_24" />
+
+    <ImageView
+        android:id="@+id/imageViewRegion"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewRegion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+    <ImageView
+        android:id="@+id/imageViewLabel"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="176dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewLibelle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_label_24" />
 
     <TextView
         android:id="@+id/textViewVague"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="80dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewSecteur" />
+        app:layout_constraintTop_toTopOf="@+id/textViewSecteur"
+        />
 
     <TextView
-        android:id="@+id/textViewRegion"
+        android:id="@+id/textViewSecteur"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="72dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewVague" />
+        app:layout_constraintTop_toTopOf="@+id/textViewLibelle" />
+
+    <TextView
+        android:id="@+id/textViewSigle"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="104dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewAdresse"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="80dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewRegion" />
 
     <TextView
-        android:id="@+id/textViewFb"
+        android:id="@+id/textViewLibelle"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="72dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewSigle" />
+
+    <TextView
+        android:id="@+id/textViewNum"
+        android:layout_width="307dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="72dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewAdresse" />
 
     <TextView
-        android:id="@+id/textViewTwitter"
+        android:id="@+id/textViewRegion"
         android:layout_width="307dp"
         android:layout_height="46dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="72dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewFb" />
+        app:layout_constraintTop_toTopOf="@+id/textViewVague" />
 
-    <TextView
-        android:id="@+id/textViewInst"
-        android:layout_width="307dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="76dp"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewTwitter" />
 
-    <!-- <ImageButton
-        android:id="@+id/fb_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="36dp"
-        android:background="@color/white"
-        android:src="@drawable/twitter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAdresse" /> -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

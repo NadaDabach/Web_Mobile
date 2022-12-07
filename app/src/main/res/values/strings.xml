@@ -43,5 +43,8 @@
     </string-array>
 
     <string name="api_link"><a href="https://app-cb40d835-d4b4-407f-83a6-0452ebe04576.cleverapps.io">Lien API</a></string>
+    <string name="backButton">Retour à la page principale</string>
+    <string name="numTel">Numéro de téléphone</string>
+    <string name="create_school">Create School</string>
     <!-- link for practice textview-->
 </resources>

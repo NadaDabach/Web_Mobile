@@ -50,7 +50,6 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
 
         val school = schools[position];
 
-        //holder.image.setImageResource(school.image)
         holder.libelle.text = school.libelle
         holder.secteur.text = school.secteur
         holder.vague.text = school.vague
@@ -72,6 +71,7 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
             school.favorite = !school.favorite
             schoolFavorite?.onFavoriteSchool(school)
             addToFavorite(holder, school.favorite)
+
         }
 
         holder.itemView.setOnClickListener {
@@ -82,6 +82,7 @@ class SchoolAdapter(private var schools: List<School>) : RecyclerView.Adapter<Sc
             intent.putExtra("vague",school.vague)
             intent.putExtra("region",school.region)
             intent.putExtra("adresse",school.adresse)
+            intent.putExtra("num",school.numero_telephone)
 
             context.startActivity(intent)
         }
